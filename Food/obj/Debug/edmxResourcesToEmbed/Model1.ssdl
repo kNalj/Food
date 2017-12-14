@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ingredients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Meal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Meals_Ingredients">
+    <Key>
+      <PropertyRef Name="Id_Meal" />
+      <PropertyRef Name="Id_Ingredient" />
+    </Key>
+    <Property Name="Id_Meal" Type="int" Nullable="false" />
+    <Property Name="Id_Ingredient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Symptoms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Meals_Ingredients_Ingredient">
+    <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="1" />
+    <End Role="Meals_Ingredients" Type="Self.Meals_Ingredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Meals_Ingredients">
+        <PropertyRef Name="Id_Ingredient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meals_Ingredients_Meal">
+    <End Role="Meal" Type="Self.Meal" Multiplicity="1" />
+    <End Role="Meals_Ingredients" Type="Self.Meals_Ingredients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Meals_Ingredients">
+        <PropertyRef Name="Id_Meal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meal" EntityType="Self.Meal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meals_Ingredients" EntityType="Self.Meals_Ingredients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Symptoms" EntityType="Self.Symptoms" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Meals_Ingredients_Ingredient" Association="Self.FK_Meals_Ingredients_Ingredient">
+      <End Role="Ingredients" EntitySet="Ingredients" />
+      <End Role="Meals_Ingredients" EntitySet="Meals_Ingredients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meals_Ingredients_Meal" Association="Self.FK_Meals_Ingredients_Meal">
+      <End Role="Meal" EntitySet="Meal" />
+      <End Role="Meals_Ingredients" EntitySet="Meals_Ingredients" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

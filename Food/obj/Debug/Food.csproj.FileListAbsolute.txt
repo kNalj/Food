@@ -1,0 +1,27 @@
+c:\users\korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Food.exe.config
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.Properties.Resources.resources
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.csproj.GenerateResource.Cache
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Food.exe
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Food.pdb
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.exe
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.pdb
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.AddMealForm.resources
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\EntityFramework.dll
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\EntityFramework.xml
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.AddNewIngredientForm.resources
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Database1.mdf
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Database1_log.ldf
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Model1.Context.tt
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Model1.Context.cs
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.MainForm.resources
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.AddNewSymptom.resources
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Food.exe.manifest
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\bin\Debug\Food.application
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.TrustInfo.xml
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.exe.manifest
+C:\Users\Korisnik\documents\visual studio 2015\Projects\Food\Food\obj\Debug\Food.application
+D:\Downloads\Food\Food\bin\Debug\Food.exe.config
+D:\Downloads\Food\Food\obj\Debug\Food.exe
+D:\Downloads\Food\Food\obj\Debug\Food.pdb

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Ingredients">
+      <EntityTypeMapping TypeName="Database1Model.Ingredients">
+        <MappingFragment StoreEntitySet="Ingredients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meal">
+      <EntityTypeMapping TypeName="Database1Model.Meal">
+        <MappingFragment StoreEntitySet="Meal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Meals_Ingredients" TypeName="Database1Model.Meals_Ingredients" StoreEntitySet="Meals_Ingredients">
+      <EndProperty Name="Ingredients">
+        <ScalarProperty Name="Id" ColumnName="Id_Ingredient" />
+      </EndProperty>
+      <EndProperty Name="Meal">
+        <ScalarProperty Name="Id" ColumnName="Id_Meal" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Symptoms">
+      <EntityTypeMapping TypeName="Database1Model.Symptoms">
+        <MappingFragment StoreEntitySet="Symptoms">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

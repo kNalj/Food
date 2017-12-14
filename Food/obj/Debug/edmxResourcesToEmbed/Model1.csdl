@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ingredients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Meal" Relationship="Self.Meals_Ingredients" FromRole="Ingredients" ToRole="Meal" />
+  </EntityType>
+  <EntityType Name="Meal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ingredients" Relationship="Self.Meals_Ingredients" FromRole="Meal" ToRole="Ingredients" />
+  </EntityType>
+  <Association Name="Meals_Ingredients">
+    <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="*" />
+    <End Role="Meal" Type="Self.Meal" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredients" />
+    <EntitySet Name="Meal" EntityType="Self.Meal" />
+    <AssociationSet Name="Meals_Ingredients" Association="Self.Meals_Ingredients">
+      <End Role="Ingredients" EntitySet="Ingredients" />
+      <End Role="Meal" EntitySet="Meal" />
+    </AssociationSet>
+    <EntitySet Name="Symptoms" EntityType="Database1Model.Symptoms" />
+  </EntityContainer>
+  <EntityType Name="Symptoms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>
